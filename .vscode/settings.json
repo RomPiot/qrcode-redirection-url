@@ -1,0 +1,9 @@
+{
+    "[php]": {
+        "editor.defaultFormatter": "wongjn.php-sniffer",
+        "editor.tabSize": 4
+      },
+      "phpSniffer.standard": "./phpcs.xml.dist",
+    "phpSniffer.run": "onType",
+  "phpSniffer.autoDetect": true,
+}

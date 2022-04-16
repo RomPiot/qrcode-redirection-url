@@ -1,0 +1,27 @@
+# fm_elfinder:
+#     instances:
+#         default:
+#             connector:
+#                 roots:
+#                     uploads:
+#                         driver: LocalFileSystem
+#                         path: uploads
+
+fm_elfinder:
+    assets_path: /assets
+    instances:
+        default:
+            locale: fr
+            editor: ckeditor
+            fullscreen: true
+            connector:
+                debug: true 
+                roots:
+                    uploads:
+                        accepted_name: '/^[^\.].*/'
+                        show_hidden: false 
+                        driver: LocalFileSystem
+                        path: uploads/images
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg', 'image/gif']
+                        upload_deny: ['all']
+                        upload_max_size: 2M     

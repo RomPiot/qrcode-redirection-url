@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+    <arg name="basepath" value="." />
+    <arg name="cache" value=".phpcs-cache" />
+    <arg name="colors" />
+    <arg name="extensions" value="php" />
+
+    <rule ref="PSR12" />
+
+    <file>bin/</file>
+    <file>config/</file>
+    <file>public/</file>
+    <file>src/</file>
+    <file>tests/</file>
+
+    <rule ref="PEAR">
+        <!-- <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment" />
+        <exclude name="PEAR.Commenting.ClassComment.Missing" />
+        <exclude name="PEAR.Commenting.FileComment.Missing" />
+        <exclude name="PEAR.Classes.ClassDeclaration.OpenBraceNotAlone" />
+        <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNotAlone" />
+        <exclude name="Generic.Commenting.DocComment.MissingShort" /> -->
+
+        <!-- <exclude name="PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.NotCamelCaps" />
+        <exclude name="PEAR.ControlStructures.MultiLineCondition.SpaceBeforeOpenBrace" />
+        <exclude name="PEAR.ControlStructures.ControlSignature" />
+        <exclude name="PEAR.Files.IncludingFile.UseInclude" />
+        <exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.MethodDoubleUnderscore" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore" />
+        <exclude name="PEAR.Commenting.ClassComment.InvalidPackage" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag" />
+        <exclude name="PEAR.NamingConventions.ValidClassName.StartWithCapital" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps" />
+        <exclude name="PEAR.Classes.ClassDeclaration.OpenBraceNewLine" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket" />
+        <exclude name="PEAR.ControlStructures.MultiLineCondition.SpacingAfterOpenBrace" />
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType" />
+        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn" />
+        <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact" />
+        <exclude name="PEAR.ControlStructures.MultiLineCondition.NewlineBeforeOpenBrace" />
+        <exclude name="PEAR.NamingConventions.ValidClassName.Invalid" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.FunctionNoCapital" />
+        <exclude name="PEAR.Commenting.ClassComment.InvalidAuthors" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamName" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
+        <exclude name="PEAR.Commenting.ClassComment.IncompleteCopyright" /> -->
+    </rule>
+
+    <!-- Include some sniffs from other standards that don't conflict with PEAR -->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+    <rule ref="Squiz.Arrays.ArrayDeclaration" />
+    <!-- <rule ref="Squiz.Commenting.ClosingDeclarationComment" /> -->
+    <rule ref="Squiz.ControlStructures.ControlSignature" />
+    <rule ref="Squiz.ControlStructures.ElseIfDeclaration" />
+    <rule ref="Squiz.Commenting.BlockComment" />
+    <rule ref="Squiz.Commenting.DocCommentAlignment" />
+    <rule ref="Squiz.Commenting.EmptyCatchComment" />
+    <rule ref="Squiz.Commenting.InlineComment" />
+    <rule ref="Squiz.Commenting.LongConditionClosingComment" />
+    <rule ref="Squiz.Commenting.PostStatementComment" />
+    <rule ref="Squiz.Commenting.VariableComment" />
+    <rule ref="Squiz.Formatting.OperatorBracket" />
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing" />
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage" />
+    <rule ref="Squiz.PHP.DisallowInlineIf" />
+    <rule ref="Squiz.Scope.MethodScope" />
+    <!-- <rule ref="Squiz.Strings.ConcatenationSpacing" /> -->
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing" />
+    <!-- <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace" /> -->
+    <!-- <rule ref="Squiz.WhiteSpace.FunctionSpacing" /> -->
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" />
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Generic.Commenting.Todo" />
+    <rule ref="Generic.ControlStructures.DisallowYodaConditions" />
+    <rule ref="Generic.ControlStructures.InlineControlStructure" />
+    <rule ref="Generic.Formatting.DisallowMultipleStatements" />
+    <rule ref="Generic.Formatting.SpaceAfterCast" />
+    <rule ref="Generic.NamingConventions.ConstructorName" />
+    <rule ref="Generic.PHP.DeprecatedFunctions" />
+    <rule ref="Generic.PHP.LowerCaseKeyword" />
+    <rule ref="Generic.Strings.UnnecessaryStringConcat" />
+    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing" />
+    <rule ref="PSR2.Classes.PropertyDeclaration" />
+    <rule ref="PSR2.Methods.MethodDeclaration" />
+    <rule ref="PSR2.Files.EndFileNewline" />
+    <rule ref="PSR12.Files.OpenTag" />
+    <rule ref="Zend.Files.ClosingTag" />
+
+</ruleset>
